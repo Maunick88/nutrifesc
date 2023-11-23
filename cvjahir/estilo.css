@@ -1,0 +1,46 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilos para los títulos de sección */
+h2 {
+    color: #007BFF;
+}
+
+/* Estilos para los párrafos */
+p {
+    margin: 10px 0;
+}
+
+/* Estilos para la foto */
+#foto {
+    max-width: 200px;
+    border-radius: 50%;
+    border: 5px solid #007BFF;
+}
+
+/* Estilos para las secciones de información personal, experiencia laboral y educación */
+section {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}

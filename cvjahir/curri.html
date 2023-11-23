@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+    <!-- Incluye el CSS de Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .resume {
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            max-width: 150px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+        .section-title {
+            color: #17a2b8;
+            border-bottom: 2px solid transparent;
+            display: inline-block;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .section-title:hover {
+            border-color: #17a2b8;
+            animation: shake 0.5s ease infinite;
+        }
+        .animate-text {
+            animation: slide-in-left 1s ease forwards;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(3px); }
+        }
+        @keyframes slide-in-left {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Estilo para las estrellas */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: #fff;
+            width: 2px;
+            height: 2px;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(100vh); }
+        }
+
+        /* Estilos para las habilidades */
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skill {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .skill-bar {
+            background-color: #333;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            flex: 3;
+        }
+
+        .skill-level {
+            height: 100%;
+            width: 0;
+            background-color: #17a2b8;
+            animation: fill 2s ease-in-out;
+        }
+
+        @keyframes fill {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Agregar estrellas parpadeantes al fondo -->
+    <div class="stars">
+        <!-- Genera las estrellas de manera dinámica con JavaScript -->
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="resume mt-5">
+                    <div class="text-center">
+                        <img src="foto.JPG" alt="Tu Foto" class="profile-img">
+                        <h1 class="mt-3 section-title">Jahir Muñoz Hernández</h1>
+                        <p class="lead animate-text">Desarrollador backend & frontend</p>
+                        <p class="lead animate-text">Ciudad de México</p>
+                    </div>
+                    <hr>
+
+                    <!-- Información personal -->
+                    <h2 class="section-title">Datos Personales</h2>
+                    <p class="animate-text"><strong>Correo Electrónico:</strong> jahir913@gmail.com</p>
+                    <p class="animate-text"><strong>Teléfono:</strong> (+52) 5543922962</p>
+
+                    <!-- Experiencia laboral -->
+                    <h2 class="section-title">Experiencia Laboral</h2>
+                    <p class="animate-text"><strong>Administrador de Servidores</strong> - Mojang (2012-2014)</p>
+                    <p class="animate-text">Controlar todos los roles de los trabajadores y supervisar el buen funcionamiento del servidor por cualquier anomalía, así mismo el manejo de bases de datos.</p>
+                    <p class="animate-text"><strong>Gestor de Plugins</strong> - Mojang (2015)</p>
+                    <p class="animate-text">Desarrollador de plugins en fases Beta para implementarlos en servidores de videojuegos de acuerdo a los requerimientos del cliente.</p>
+
+                    <p class="animate-text"><strong>Gestor de Bases de Datos en servidores dedicados</strong> - Hamachi (2013)</p>
+                    <p class="animate-text">Creador de un servidor dedicado para videojuegos y gestor del mismo en cuanto a información privada para fines estadísticos y presupuestales.</p>
+                    <p class="animate-text"><strong>Desarrollador Web</strong> - Habbo (2011)</p>
+                    <p class="animate-text">Desarrollador de páginas Web en el ámbito de foros donde se incluía radio internacional, galería, información, login, personalización, animaciones, preguntas frecuentes, etc.</p>
+
+                    <!-- Educación -->
+                    <h2 class="section-title">Educación</h2>
+                    <p class="animate-text"><strong>Licenciatura en Informática en curso</strong> - Universidad Nacional Autónoma de México (2020-Actualidad)</p>
+
+                    <!-- Habilidades -->
+                    <h2 class="section-title">Habilidades</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">HTML</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 100%;"></div> <!-- Cambia el ancho aquí -->
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%;"></div> <!-- Cambia el ancho aquí -->
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div> <!-- Cambia el ancho aquí -->
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%;"></div> <!-- Cambia el ancho aquí -->
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Inglés</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;"></div> <!-- Cambia el ancho aquí -->
+                            </div>
+                        </div>
+                        <!-- Agrega más habilidades aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluye el JS de Bootstrap desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Genera estrellas de manera dinámica
+        const starsContainer = document.querySelector('.stars');
+
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            return star;
+        }
+
+        for (let i = 0; i < 50; i++) {
+            starsContainer.appendChild(createStar());
+        }
+
+        // Animación de las barras de habilidades
+        const skillBars = document.querySelectorAll('.skill-level');
+
+        function animateSkills() {
+            skillBars.forEach((bar) => {
+                bar.style.width = '100%';
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const skillsSection = document.querySelector('.skills');
+            const skillsSectionTop = skillsSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (skillsSectionTop < windowHeight) {
+                animateSkills();
+            }
+        });
+    </script>
+</body>
+</html>
